@@ -16,6 +16,7 @@ def index():
         <a href='/stats_by_city?genre=Classical'>Stats by city with correct parameter 'Classical'</a> <hr>
         <a href='/stats_by_city?genre=Alternative'>Stats by city with correct parameter 'Alternative'</a> <hr>
         <a href='/stats_by_city?genre=Science Fiction'>Stats by city with correct parameter 'Science Fiction'</a> <hr>
+        <a href='/stats_by_city?genre=Rock And Roll'>Stats by city with correct parameter 'Rock And Roll'</a> <hr>
         <a href='/stats_by_city?genre=Classical234'>Stats by city with wrong parameter 'Classical234'</a> <hr>
         <a href='/point-belongs-to-circle'>The point belongs to the circle</a> <hr>
     """
