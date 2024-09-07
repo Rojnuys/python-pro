@@ -1,26 +1,16 @@
 # https://leetcode.com/problems/palindrome-number/
 
-
 class Solution(object):
     def isPalindrome(self, x):
         """
         :type x: int
         :rtype: bool
         """
-        s = str(x)
-        if s != s[::-1]:
-            return False
-
-        return True
+        x = str(x)
+        return x == x[::-1]
 
 
 # https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-
-
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 
 class Solution(object):
@@ -29,27 +19,20 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        if head is None:
-            return head
+        if not head:
+            return None
 
         tmp = head
-        while tmp.next is not None:
+        while tmp.next:
             if tmp.val == tmp.next.val:
                 tmp.next = tmp.next.next
-                continue
-            tmp = tmp.next
+            else:
+                tmp = tmp.next
 
         return head
 
 
 # https://leetcode.com/problems/binary-tree-inorder-traversal/
-
-
-class TreeNode(object):
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
 
 
 class Solution(object):
@@ -58,17 +41,17 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        if root is None:
-            return root
+        if not root:
+            return None
 
         result = []
 
-        if root.left is not None:
+        if root.left:
             result += self.inorderTraversal(root.left)
 
         result += [root.val]
 
-        if root.right is not None:
+        if root.right:
             result += self.inorderTraversal(root.right)
 
         return result
@@ -77,29 +60,22 @@ class Solution(object):
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 
-class TreeNode(object):
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-
-
 class Solution(object):
     def maxDepth(self, root, level=1):
         """
         :type root: TreeNode
         :rtype: int
         """
-        if root is None:
+        if not root:
             return 0
 
         ll = 0
         rl = 0
 
-        if root.left is not None:
+        if root.left:
             ll = self.maxDepth(root.left, level + 1)
 
-        if root.right is not None:
+        if root.right:
             rl = self.maxDepth(root.right, level + 1)
 
         if ll >= level and ll >= rl:
