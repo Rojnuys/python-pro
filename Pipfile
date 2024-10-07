@@ -9,6 +9,7 @@ pandas = "*"
 faker = "*"
 webargs = "*"
 requests = "*"
+matplotlib = "*"
 
 [dev-packages]
 
