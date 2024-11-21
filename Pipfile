@@ -10,6 +10,8 @@ faker = "*"
 webargs = "*"
 requests = "*"
 matplotlib = "*"
+aiofiles = "*"
+aiosqlite = "*"
 
 [dev-packages]
 
